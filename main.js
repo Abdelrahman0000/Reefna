@@ -32,16 +32,8 @@
     });
   }
 
-  // --- layered parallax inside every scene (desktop only; phones get plain flow) ---
-  const isMobile = window.matchMedia('(max-width: 640px)').matches;
+  // --- layered parallax inside every scene ---
   document.querySelectorAll('.scene').forEach((scene) => {
-    if (isMobile) {
-      scene.querySelectorAll('.reveal').forEach((el) => {
-        el.style.opacity = 1;
-        el.style.transform = 'none';
-      });
-      return;
-    }
     scene.querySelectorAll('.layer[data-speed]').forEach((layer) => {
       const speed = parseFloat(layer.dataset.speed || '0.3');
       // slower layers drift with scroll; foreground moves against it
