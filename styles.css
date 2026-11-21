@@ -296,19 +296,32 @@ a{color:inherit;text-decoration:none}
   .nav{gap:1rem}
   .nav-links{display:none}
   .nav-cta{margin-inline-start:auto}
-  .content,.scene-canal .content,.scene-harvest .content{
-    inset-inline:1.4rem;top:auto;bottom:16%;transform:none;
-  }
-  .headline{font-size:clamp(4rem,26vw,8rem)}
-  .scarf{display:none} /* farmer is cropped out of the mobile cover frame */
-  /* portrait crop: aim each scene at its subject, not the empty sky */
+
+  /* phones: plain vertical flow instead of the sticky card stack,
+     so no incoming card can ever cover a scene's text */
+  .scene{position:relative;top:auto;height:auto;min-height:0;
+    overflow:hidden;border-radius:0;box-shadow:none}
+
+  /* hero keeps the full-screen sunset cover with overlaid copy */
+  .scene-hero{height:100svh}
   .scene-hero .layer-scene img.scene-img{object-position:50% 55%}
-  .scene-canal .layer-scene img.scene-img{object-position:50% 74%}
-  .scene-harvest .layer-scene img.scene-img{object-position:50% 76%}
-  .boat{top:53%;width:22%} /* keep the felucca on the water in the portrait crop */
-  .scene-canal .content{bottom:10%} /* drop canal text block clear of the buffalo */
-  .buffalo{width:40%;left:29%;top:45%} /* feet at the waterline, head clear of the eyebrow */
-  .scene{border-radius:1.4rem 1.4rem 0 0}
+  .scene-hero .content{inset-inline:1.4rem;top:auto;bottom:9%;transform:none}
+  .headline{font-size:clamp(4rem,26vw,8rem)}
+  .boat{top:53%;width:22%} /* felucca stays on the water in the portrait crop */
+  .scarf{display:none}
+
+  /* canal & harvest: the whole artwork on top, copy below it on dark bg */
+  .scene-canal .layer-scene,.scene-harvest .layer-scene{
+    position:relative;inset:auto;width:100%;height:64vw;
+  }
+  .scene-canal .layer:not(.layer-scene),
+  .scene-harvest .layer:not(.layer-scene){display:none}
+  .scene-canal .content,.scene-harvest .content{
+    position:static;inset:auto;transform:none;max-width:none;
+    padding:1.9rem 1.4rem 2.6rem;
+  }
+  .buffalo{width:28%;left:36%;top:46%} /* same composition as the full artwork */
+  .scene-end{min-height:82svh}
 }
 
 /* ---------- reduced motion: plain scroll, no ambient/parallax ---------- */
