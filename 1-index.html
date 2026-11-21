@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ريفنا — الحياة الريفية المصرية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0718'/%3E%3Cpath d='M16 26 C15.5 20 15 15 13.5 11 C15 15 15.5 20 15.8 26 Z' fill='%23ffcf8a'/%3E%3Cpath d='M13.8 12 C10 9.5 6.5 10 4.5 12 C8 7.5 11.5 7.5 13.9 10.5 C13.2 6.5 11 4 8 2.5 C12 3.5 14.5 6.5 15 10.5 C16.5 6.5 19.5 4.5 23.5 5 C19.5 6.5 17 9 16.2 12.5 Z' fill='%23ffcf8a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     ريفنا — Egyptian rural life, parallax scroll site
+     Sections stack via position:sticky; each incoming scene
+     slides up over the previous one. Layers inside each scene
+     move at different scroll speeds (GSAP ScrollTrigger scrub).
+     Ambient animation: birds, light rays, water shimmer, dust.
+     Illustrated concept piece: AI-generated artwork, original
+     Arabic copy, no real organization behind it.
+     ============================================================ -->
+
+<nav class="nav" aria-label="التنقل الرئيسي">
+  <a class="brand" href="#hero">ريفنا</a>
+  <div class="nav-links">
+    <a href="#hero">البداية</a>
+    <a href="#canal">الترعة</a>
+    <a href="#harvest">الحصاد</a>
+    <a href="#end">عن المشروع</a>
+  </div>
+  <a class="nav-cta" href="#canal">ابدأ الرحلة</a>
+</nav>
+
+<main class="stack">
+
+  <!-- ============ SCENE 1 — HERO: golden hour on the canal ============ -->
+  <section class="scene scene-hero" id="hero">
+    <div class="layer layer-scene" data-speed="0.25">
+      <img class="scene-img" src="hero-base.jpg" alt="غروب الشمس على ترعة في الريف المصري، نخيل وحقول وفلاح واقف على الضفة">
+      <div class="boat" aria-hidden="true"><img src="cut-felucca.png" alt=""></div>
+      <div class="scarf" aria-hidden="true"><img src="cut-scarf-flip.png" alt=""></div>
+    </div>
+    <div class="layer layer-glow" data-speed="0.4" aria-hidden="true"></div>
+    <div class="layer layer-birds" data-speed="0.7" aria-hidden="true">
+      <span class="bird b1"></span><span class="bird b2"></span><span class="bird b3"></span>
+      <span class="bird b9"></span><span class="bird b10"></span>
+    </div>
+    <div class="layer layer-fore" data-speed="1.15" aria-hidden="true">
+      <svg class="fore-palms" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice">
+        <g fill="#1a1030">
+          <path d="M120 320 C118 260 112 210 96 168 C80 210 74 260 76 320 Z"/>
+          <path d="M96 172 C60 150 30 152 8 170 C40 138 70 136 96 160 C92 130 76 108 48 96 C84 100 104 124 108 156 C118 128 140 112 172 112 C142 128 122 150 116 176 Z"/>
+          <path d="M1330 320 C1332 250 1340 196 1360 150 C1342 196 1334 252 1332 320 Z"/>
+          <path d="M1358 154 C1396 132 1426 136 1448 156 C1414 122 1382 120 1356 146 C1362 114 1380 94 1410 84 C1372 86 1350 110 1344 144 C1332 116 1308 102 1276 104 C1308 118 1328 140 1336 168 Z"/>
+        </g>
+        <path d="M0 320 L0 292 C200 268 420 284 640 276 C900 266 1180 288 1440 272 L1440 320 Z" fill="#150b26"/>
+      </svg>
+    </div>
+    <div class="content">
+      <p class="tagline reveal">من قلب الجرايد والترع</p>
+      <h1 class="headline reveal">الريف</h1>
+      <p class="lede reveal">جولة بصرية هادية في الريف المصري وقت الغروب: نيل صغير، نخيل باسق، وفلاح واقف على الضفة يشوف يومه وهو بيخلص.</p>
+      <a class="pill reveal" href="#canal">ابدأ الرحلة</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ============ SCENE 2 — CANAL: dusk, buffalo, egrets ============ -->
+  <section class="scene scene-canal" id="canal">
+    <div class="layer layer-scene" data-speed="0.25">
+      <img class="scene-img" src="canal-nobuffalo.jpg" alt="المغربية على الترعة: مية هادية وطيور أبو قردان بيضا طايرة">
+      <div class="buffalo" aria-hidden="true">
+        <img class="buf-body" src="cut-buffalo.png" alt="">
+        <div class="buf-head"><img src="cut-buffalo.png" alt=""><div class="buf-eyelid"></div></div>
+        <div class="buf-tail"><img src="cut-buffalo.png" alt=""></div>
+      </div>
+    </div>
+    <div class="layer layer-shimmer" data-speed="0.35" aria-hidden="true"></div>
+    <div class="layer layer-rays" data-speed="0.45" aria-hidden="true"></div>
+    <div class="layer layer-birds" data-speed="0.7" aria-hidden="true">
+      <span class="bird b4"></span><span class="bird b5"></span>
+    </div>
+    <div class="layer layer-fore" data-speed="1.15" aria-hidden="true">
+      <svg class="fore-reeds" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice">
+        <g fill="#0d1226">
+          <path d="M0 260 L0 210 C40 190 60 200 84 176 C80 210 96 216 120 200 C110 230 140 226 160 214 C150 244 190 240 210 230 L220 260 Z"/>
+          <path d="M1440 260 L1440 200 C1400 186 1384 198 1362 172 C1364 206 1348 214 1326 200 C1334 230 1306 228 1288 218 C1296 246 1258 244 1240 236 L1230 260 Z"/>
+        </g>
+      </svg>
+    </div>
+    <div class="content">
+      <p class="eyebrow reveal">على ضفاف الترعة</p>
+      <h2 class="headline-md reveal">سكون</h2>
+      <p class="lede reveal">قبل المغرب بدقيقة، الترعة بتاخد لون السما. الجاموسة واقفة في المية تبرّد، وطيور أبو قردان بتعدّي على ضهرها زي كل يوم.</p>
+      <a class="text-link reveal" href="#harvest">كمّل للحصاد ←</a>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 3 — HARVEST: wheat + pigeon tower ============ -->
+  <section class="scene scene-harvest" id="harvest">
+    <div class="layer layer-scene" data-speed="0.25">
+      <img class="scene-img" src="scene-harvest.jpg" alt="حقل قمح دهبي وبرج حمام طيني والحمام طاير حواليه وقت العصرية">
+      <img class="arm-layer" src="scene-harvest.jpg" alt="" aria-hidden="true">
+      <img class="robe-layer" src="scene-harvest.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="layer layer-dust" data-speed="0.5" aria-hidden="true">
+      <span class="mote m1"></span><span class="mote m2"></span><span class="mote m3"></span>
+      <span class="mote m4"></span><span class="mote m5"></span><span class="mote m6"></span>
+    </div>
+    <div class="layer layer-birds" data-speed="0.75" aria-hidden="true">
+      <span class="bird b6"></span><span class="bird b7"></span><span class="bird b8"></span>
+    </div>
+    <div class="layer layer-fore" data-speed="1.15" aria-hidden="true">
+      <svg class="fore-wheat" viewBox="0 0 1440 240" preserveAspectRatio="xMidYMax slice">
+        <g fill="#2a1508">
+          <path d="M60 240 C58 190 54 160 44 130 C58 156 64 190 66 240 Z"/>
+          <path d="M96 240 C96 184 100 150 114 118 C102 152 100 190 102 240 Z"/>
+          <path d="M1380 240 C1382 188 1388 156 1400 128 C1386 156 1380 192 1378 240 Z"/>
+          <path d="M1340 240 C1340 190 1336 162 1324 136 C1338 160 1344 194 1346 240 Z"/>
+        </g>
+        <path d="M0 240 L0 208 C260 188 520 206 760 196 C1020 186 1240 204 1440 192 L1440 240 Z" fill="#221006"/>
+      </svg>
+    </div>
+    <div class="content">
+      <p class="eyebrow reveal">دهب الأرض</p>
+      <h2 class="headline-md reveal">الحصاد</h2>
+      <p class="lede reveal">في موسم القمح الشغل بيبدأ مع الفجر: منجل، وحزمة سنابل على الكتف، وحمام البرج بيلف فوق الحقول مستني بقايا الحصيد.</p>
+      <a class="text-link reveal" href="#end">الختام ←</a>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section class="scene scene-end" id="end">
+    <div class="end-sky" aria-hidden="true"></div>
+    <div class="content">
+      <h2 class="headline-md reveal">الحكاية لسه مكمّلة</h2>
+      <p class="lede reveal">مشروع تصميم تفاعلي بيحتفي بالريف المصري: أربع مشاهد مرسومة بالذكاء الاصطناعي واتحرّكت بطبقات سكرول ناعمة. كل اللي شوفته تخيّل فني، مش توثيق لمكان بعينه.</p>
+      <button class="pill reveal" id="backToTop" type="button">ارجع للبداية</button>
+      <p class="fineprint reveal">مشروع بورتفوليو — تصميم وتطوير واجهات. الرسوم متولّدة بالذكاء الاصطناعي والنصوص من تأليف المشروع.</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
